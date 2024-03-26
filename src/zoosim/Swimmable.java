@@ -8,8 +8,7 @@ package zoosim;
  *
  * @author bmara
  */
-public interface ObjectInterface {
-    //Methods: turn(int degrees), place(int x, int y)
-    public void turn(double direction);
-    public void place(int x, int y);
+public interface Swimmable {
+    
+    public boolean canSurface();
 }

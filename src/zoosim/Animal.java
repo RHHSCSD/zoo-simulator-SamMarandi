@@ -16,42 +16,54 @@ public class Animal implements EntityInterface{
     private int age;
     private int[] position = new int[2]; // x, y coordinates
     private String size; // Categories such as small, medium, large
-    private String speed; // Categories such as slow, moderate, fast
+    private int speed; // Categories such as slow, moderate, fast
     private double direction; // Degrees
-    private int hunger;
-    private int fatigue;
+    private boolean hunger;
+    private boolean fatigue;
     private Image image; // Assuming Image is a class representing images
     private String sound;
 
+    public boolean getHunger(){
+        return hunger;
+    }
+    public boolean getFatigue(){
+        return fatigue;
+    }
     @Override
     public void move() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        System.out.println("Animal has moved");
+        double radians = Math.toRadians(this.direction);
+        this.position[0] += speed*Math.cos(radians);
+        this.position[1] += speed*Math.sin(radians);
+        
+     }
 
     @Override
     public void makeSound() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Raaa");
     }
 
     @Override
     public void eat() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Animal has ate");
+        hunger = false;
     }
 
     @Override
     public void sleep() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Animal has slept");
+        fatigue = false;
     }
 
     @Override
-    public void turn(double degree) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public void turn(double degrees) {
+            this.direction += degrees;
+        }
 
     @Override
     public void place(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+            System.out.println("position is " + x + ", " + y);
+        }
 }
     //public void makeSound(){
 

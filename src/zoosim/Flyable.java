@@ -8,8 +8,10 @@ package zoosim;
  *
  * @author bmara
  */
-public interface ObjectInterface {
-    //Methods: turn(int degrees), place(int x, int y)
-    public void turn(double direction);
-    public void place(int x, int y);
+public interface Flyable {
+    
+    public void fly();
+    public void land();
+    public void isFlying();
+    
 }
