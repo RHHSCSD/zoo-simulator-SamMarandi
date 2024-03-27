@@ -4,28 +4,65 @@
  */
 package zoosim;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author bmara
  */
-public class BirdAnim extends Animal implements Flyable{
+/**
+ * Represents a bird animal entity in the zoo simulation.
+ */
+public class BirdAnim extends Animal implements Flyable {
+    // Fields
+    private boolean canFly; // Indicates if the bird can fly
     
-    private boolean canFly;
-    String[] birdAnimals = {"Eagle", "Parrot", "Raven"};
-
+    // Constructor
+    /**
+     * Constructs a new BirdAnim object.
+     */
+    public BirdAnim() {
+        // Initialize animalList and add bird species
+        animalList = new ArrayList<>();
+        animalList.add("Eagle");
+        animalList.add("Parrot");
+        animalList.add("Raven");
+    }
+    
+    // Methods
+    /**
+     * Makes the bird fly.
+     */
     @Override
     public void fly() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        // Output that the bird is flying
+        System.out.println("Animal is flying");
     }
 
+    /**
+     * Makes the bird land.
+     */
     @Override
     public void land() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        // Output that the bird has landed
+        System.out.println("Animal has landed");
     }
 
+    /**
+     * Checks if the bird is flying.
+     * @return true if the bird is flying, false otherwise.
+     */
     @Override
-    public void isFlying() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean isFlying() {
+        return canFly;
     }
     
+    /**
+     * Overrides the makeSound method to produce bird noises.
+     */
+    @Override
+    public void makeSound() {
+        // Output bird noises
+        System.out.println("*bird noises*");
+    }
 }

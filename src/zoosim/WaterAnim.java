@@ -4,17 +4,48 @@
  */
 package zoosim;
 
+import java.util.ArrayList;
+
 /**
- *
- * @author bmara
+ * Represents a subclass of Animal that can swim and surface in water.
+ * Implements the Swimmable interface.
  */
 public class WaterAnim extends Animal implements Swimmable{
     
-    private boolean canBreath;
-    String[] waterAnimals = {"Shark", "Dolphin", "Fish"};
-
+    private boolean canBreath; // Determines if the animal can breathe underwater
+    private boolean canSwim; // Determines if the animal can swim
+    
+    /**
+     * Constructor for WaterAnim class.
+     * Initializes the animal list with water animals.
+     */
+    public WaterAnim(){
+        animalList= new ArrayList<>();
+        animalList.add("Shark");
+        animalList.add("Dolphin");
+        animalList.add("Fish");
+    }
+    
+    /**
+     * Checks if the animal can surface.
+     * @return true if the animal can surface, false otherwise
+     */
     @Override
     public boolean canSurface() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return canSwim;
+    }
+    
+    /**
+     * Produces the sound made by water animals.
+     */
+    @Override
+    public void makeSound(){
+        System.out.println("*water noises*");
     }
 }
+
+
+
+
+
+

@@ -4,11 +4,34 @@
  */
 package zoosim;
 
+import java.util.ArrayList;
+
 /**
- *
- * @author bmara
+ * Represents a subclass of Animal that inhabits land.
+ * It includes specific animals such as Lion, Dog, Cat, and Tiger.
  */
-public class LandAnim extends Animal{
+public class LandAnim extends Animal {
     
-    String[] landAnimals = {"Lion", "Dog", "Cat", "Tiger"};
+    // Constructor
+    
+    /**
+     * Constructs a LandAnim object and initializes the animal list with land animals.
+     */
+    public LandAnim() {
+        animalList = new ArrayList<>();
+        animalList.add("Lion");
+        animalList.add("Dog");
+        animalList.add("Cat");
+        animalList.add("Tiger");
+    }
+    
+    // Methods
+    
+    /**
+     * Overrides the makeSound method to produce a specific sound for land animals.
+     */
+    @Override
+    public void makeSound() {
+        System.out.println("ROARROARROAR");
+    }
 }

@@ -5,13 +5,28 @@
 package zoosim;
 
 /**
- *
- * @author bmara
+ * Represents an interface for entities in the zoo simulation.
+ * Extends ObjectInterface.
  */
-public interface EntityInterface extends ObjectInterface{
-    // move(), makeSound(), eat(), sleep()
+public interface EntityInterface extends ObjectInterface {
+    // Methods
+    /**
+     * Moves the entity.
+     */
     public void move();
+    
+    /**
+     * Makes a sound.
+     */
     public void makeSound();
+    
+    /**
+     * Eats.
+     */
     public void eat();
+    
+    /**
+     * Sleeps.
+     */
     public void sleep();
 }

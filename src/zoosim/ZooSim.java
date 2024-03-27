@@ -24,27 +24,25 @@ public class ZooSim {
         WaterAnim waterAnim = new WaterAnim();
         LandAnim landAnim = new LandAnim();
         BirdAnim birdAnim = new BirdAnim();
-        ArrayList<String> animalArray = new ArrayList();
-        for (int i =0; i>= waterAnim.waterAnimals.length; i++){
-            animalArray.add(waterAnim.waterAnimals[i]);
-        }
-        for (int i =0; i>= landAnim.landAnimals.length; i++){
-            animalArray.add(landAnim.landAnimals[i]);
-        }
-        for (int i =0; i>= birdAnim.birdAnimals.length; i++){
-            animalArray.add(birdAnim.birdAnimals[i]);
-        }
-        Food food = new Food();
-        for (String animal : ){
-
-        }
-        zoo.animals.add(dog);
-        zoo.animals.add(dolphin);
-        zoo.animals.add(shark);
-        zoo.animals.add(eagle);
-        zoo.animals.add(lion);
+        ZooObjects zooObject = new ZooObjects();
+        ArrayList<Animal> animalArray = new ArrayList();
+        animalArray.add(waterAnim);
+        animalArray.add(landAnim);
+        animalArray.add(birdAnim);
+        waterAnim.setDirection(30);
+        landAnim.setDirection(30);
+        birdAnim.setDirection(30);
+        
+        
+        zoo.addAnimal(animalArray, "butterdog");
         //zoo.feedAnimals(zoo.animals);
         zoo.makeAnimalSound(animalArray);
+        
+        zoo.feedAnimals(animalArray);
+        zoo.moveAnimals(animalArray);
+        zoo.makeAnimalsSleep(animalArray);
+        zoo.displayAnimals(animalArray);
+        System.out.println(zooObject.returnType());
     }
     
 }

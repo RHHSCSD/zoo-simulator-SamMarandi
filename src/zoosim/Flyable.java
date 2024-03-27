@@ -5,13 +5,26 @@
 package zoosim;
 
 /**
- *
- * @author bmara
+ * Represents an interface for entities that can fly.
  */
 public interface Flyable {
     
+    // Methods
+    
+    /**
+     * Makes the entity fly.
+     */
     public void fly();
+    
+    /**
+     * Makes the entity land.
+     */
     public void land();
-    public void isFlying();
+    
+    /**
+     * Checks if the entity is currently flying.
+     * @return true if the entity is flying, false otherwise
+     */
+    public boolean isFlying();
     
 }

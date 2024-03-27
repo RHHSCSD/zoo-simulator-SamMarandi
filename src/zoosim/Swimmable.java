@@ -5,10 +5,14 @@
 package zoosim;
 
 /**
- *
- * @author bmara
+ * Represents an interface for objects with swimming capabilities.
+ * Includes a method to determine if the object can surface.
  */
 public interface Swimmable {
     
+    /**
+     * Checks if the object can surface.
+     * @return true if the object can surface, false otherwise
+     */
     public boolean canSurface();
 }
