@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author michael.roy-diclemen
+ * @author Sam Marandi
  */
 public class ZooSim {
 
